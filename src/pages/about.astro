@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<BaseLayout
+  title="About | Jeanine White"
+  description="About Jeanine White Lorem Ipsum"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Jeanine White at work with a colleague"
+        />
+      </Hero>
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Hi, my name is Ian Mount and I'm a freshly certified at Full-Stack;
+            Full-Time Web Development Boot Camp at General Assembly General
+            Assembly Logo.
+          </p>
+          <p>
+            "I am a highly motivated and driven individual committed to
+            continual self-improvement in every aspect of my work. My objective
+            is to contribute to the development of efficient, user-friendly
+            solutions that address real-world challenges. While 'Good Job' may
+            suffice for some, I consistently aim to deliver excellence, striving
+            for nothing less than a 'Great Job' in every task I undertake. I am
+            dedicated to becoming an exceptional developer, understanding that
+            true empowerment comes from accumulating experience and knowledge
+            over time. Therefore, I value constructive feedback over praise, as
+            it provides invaluable opportunities for growth and development. I
+            eagerly welcome criticism from those with expertise exceeding my
+            own. In my search for a professional environment, I seek a workplace
+            that not only supports my individual needs but also encourages and
+            challenges me to expand my skills and expertise. I am eager to
+            contribute positively to a team that fosters continuous learning and
+            personal development."
+          </p>
+          <p>
+            To that end I would love to link up with anyone(s) that wants that
+            thinking applied to helping solve their problems Take a look around
+            and feel free to get in touch if you'd like to learn more about me.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            From managing fast-food chains to pursuing web development, my
+            journey has honed leadership, problem-solving, and customer-centric
+            skills crucial for creating impactful web experiences.
+          </p>
+          <p>
+            Experience as a Shift Lead and Assistant Store Manager cultivated
+            adaptability and operational efficiency, while direct customer
+            interaction emphasized user-centric design principles.
+          </p>
+          <p>
+            Roles as Assistant Restaurant Manager demanded organizational
+            prowess, laying the groundwork for my transition into web
+            development through certifications and ongoing learning.
+          </p>
+          <p>
+            With a diverse background, I'm poised to leverage skills in
+            leadership, adaptability, and a customer-centric approach to drive
+            business success in web development.
+          </p>
+        </div>
+      </section>
+      <h2 class="section-title">Education</h2>
+      <div class="content">
+        <p>Corporis voluptates tenetur laudantium.</p>
+      </div>
+    </main>
+
+    <section class="box skills-wrapper">
+      <div class="skills">
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="html5"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>HTML</h2>
+          <p>Proficient in writing semantic and accessible HTML5 markup.</p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="css3"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>CSS</h2>
+          <p>
+            Experienced in creating responsive and visually appealing designs
+            using CSS.
+          </p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="javascript"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>JavaScript</h2>
+          <p>
+            Skilled in developing dynamic and interactive web applications with
+            JavaScript.
+          </p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="django"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>Django</h2>
+          <p>
+            Have had experience with building web applications using the Django
+            framework.
+          </p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="react"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>React</h2>
+          <p>
+            Have had experience with developing user interfaces using the React
+            library.
+          </p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="python"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>Python</h2>
+          <p>
+            Have had experience with programming with Python for various
+            applications.
+          </p>
+        </div>
+        <div class="stack gap-2 lg:gap-4">
+          <Icon
+            icon="mongodb"
+            color="var(--accent-regular)"
+            size="2rem"
+            gradient
+          />
+          <h2>MongoDB</h2>
+          <p>Some knowledge in working with MongoDB for database management.</p>
+        </div>
+      </div>
+    </section>
+
+    <ContactCTA />
+  </div>
+
+  <style>
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    img {
+      margin-top: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--gray-200);
+    }
+
+    .section-title {
+      grid-column-start: 1;
+      font-size: var(--text-xl);
+      color: var(--gray-0);
+    }
+
+    .content {
+      grid-column: 2 / 4;
+    }
+
+    .content :global(a) {
+      text-decoration: 1px solid underline transparent;
+      text-underline-offset: 0.25em;
+      transition: text-decoration-color var(--theme-transition);
+    }
+
+    .content :global(a:hover),
+    .content :global(a:focus) {
+      text-decoration-color: currentColor;
+    }
+
+    @media (min-width: 50em) {
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 60% 1fr;
+      }
+
+      .about > :global(:first-child) {
+        grid-column-start: 2;
+      }
+
+      section {
+        display: contents;
+        font-size: var(--text-lg);
+      }
+    }
+  </style>
+</BaseLayout>

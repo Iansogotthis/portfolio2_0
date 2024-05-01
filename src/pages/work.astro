@@ -1,0 +1,177 @@
+---
+import { getCollection } from "astro:content"; 
+import BaseLayout from "../layouts/BaseLayout.astro"; 
+import ContactCTA from "../components/ContactCTA.astro"; 
+import PortfolioPreview from "../components/PortfolioPreview.astro"; 
+import Hero from "../components/Hero.astro"; 
+import Grid from "../components/Grid.astro"; 
+const projects = (await getCollection("work")).sort( 
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf() 
+); 
+--- 
+<BaseLayout 
+  title="My Work | Jeanine White" 
+  description="Learn about Jeanine White's most recent projects" 
+> 
+  <div class="stack gap-20"> 
+    <main class="wrapper stack gap-8"> 
+      <Hero 
+        title="My Work" 
+        tagline="See my most recent projects below to get an idea of my past experience." 
+        align="start" 
+      /> 
+      <Grid variant="offset"> 
+        { 
+          projects.map((project, index) => ( 
+            <li key={index}> 
+              <PortfolioPreview project={project} /> 
+            </li> 
+          )) 
+        } 
+      </Grid> 
+    </main> 
+    <ContactCTA /> 
+  </div> 
+  <section id="projects" class="projects-section"> 
+    <h2>My Projects</h2> 
+    <div class="project-container"> 
+      { 
+        projects.map((project, index) => ( 
+          <div class="project-card" key={index}> 
+            <div class="project-item"> 
+              <div class="project-image-container"> 
+                <img 
+                  src={project.image} 
+                  alt={"Project " + (index + 1)} 
+                  class="project-image" 
+                /> 
+              </div> 
+              <div class="project-details"> 
+                { 
+                  project && project.data && project.data.title ? ( 
+                    <h3>{project.data.title}</h3> 
+                  ) : ( 
+                    <h3>Title not available</h3> 
+                  ) 
+                } 
+                <p>{project && project.data && project.data.description ? project.data.description : "Description not available"}</p> 
+                <h4>Technologies used:</h4> 
+                <ul> 
+                  { 
+                    project && project.data && project.data.technologies ? ( 
+                      project.data.technologies.map((tech, index) => ( 
+                        <li key={index}>{tech}</li> 
+                      )) 
+                    ) : ( 
+                      <li>Technologies not available</li> 
+                    ) 
+                  } 
+                </ul> 
+                <div class="project-links"> 
+                  <a href={project && project.data && project.data.demoLink ? project.data.demoLink : "#"} class="project-link demo-link"> 
+                    View Live Demo 
+                  </a> 
+                  <a href={project && project.data && project.data.githubLink ? project.data.githubLink : "#"} class="project-link github-link"> 
+                    <img 
+                      src="/images/git.jpg" 
+                      alt="GitHub Logo" 
+                      class="logo" 
+                      style="width: 12px; height: 12px" 
+                    /> 
+                    View on GitHub 
+                  </a> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        )) 
+      } 
+    </div> 
+  </section> 
+</BaseLayout> 
+<style> 
+  .project-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-top: 40px; 
+  } 
+  .project-card { 
+    width: calc(50% - 10px); 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+  } 
+  .project-card:hover { 
+    transform: translateY(-5px); 
+  } 
+  .project-item { 
+    display: flex; 
+  } 
+  .project-image-container { 
+    flex: 1; 
+    padding: 20px; 
+  } 
+  .project-image { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+  } 
+  .project-details { 
+    flex: 1; 
+    padding: 20px; 
+  } 
+  .project-details h3 { 
+    margin-top: 0; 
+  } 
+  .project-details p { 
+    margin-top: 10px; 
+  } 
+  .project-details h4 { 
+    margin-top: 20px; 
+  } 
+  .project-details ul { 
+    padding-left: 20px; 
+  } 
+  .project-details li { 
+    margin-top: 5px; 
+  } 
+  .project-links { 
+    margin-top: 20px; 
+  } 
+  .project-link { 
+    display: inline-block; 
+    margin-right: 10px; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    color: #fff; 
+    background-color: #007bff; 
+    transition: background-color 0.3s ease; 
+  } 
+  .project-link:hover { 
+    background-color: #0056b3; 
+  } 
+  .github-link { 
+    background-color: #6c757d; 
+  } 
+  .github-link:hover { 
+    background-color: #495057; 
+  } 
+  .logo { 
+    vertical-align: middle; 
+    margin-right: 5px; 
+  } 
+  .projects-section { 
+    padding: 40px 0; 
+    background-color: #f8f9fa; 
+  } 
+  h2 { 
+    text-align: center; 
+    margin-bottom: 40px; 
+  } 
+</style> 

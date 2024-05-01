@@ -1,0 +1,75 @@
+<section id="contact">
+	<h2 style="text-align: center">Get in Touch</h2>
+	<br />
+
+	<ul class="contact-links">
+	  <li>
+		<a href="https://github.com/Iansogotthis">GitHub</a
+		><img
+		  src="/images/git.jpg"
+		  alt="GitHub Logo"
+		  style="width: 16px; height: 16px"
+		/>
+	  </li>
+	  <li>
+		
+		<a href="http://www.linkedin.com/in/webdevwonder88">LinkedIn</a
+		><img
+		  src="/images/linkd.png"
+		  alt="LinkedIn Logo"
+		  style="width: 16px; height: 16px"
+		/>
+	  </li>
+	</ul>
+	<br />
+	<div id="responseMessage"></div>
+	<form
+	class="contact-form"
+	id="contactForm"
+	action="https://formspree.io/f/mqkrwqzn"
+	method="POST"
+	onsubmit="handleSubmit(event)"
+  >
+
+  <label for="name">Name:</label>
+  <input
+	style="text-align: center; border: 2px solid white"
+	type="text"
+	id="name"
+	name="name"
+	class="feedback-input"
+	placeholder="Name"
+	required
+  />
+
+	/>
+
+	  <label for="email">Email:</label>
+	  <input
+		style="text-align: center; border: 2px solid white"
+		type="email"
+		id="email"
+		name="email"
+		class="feedback-input"
+		placeholder="Email"
+		required
+	  />
+
+	  <label for="message">Message:</label>
+	  <textarea
+		style="text-align: center; border: 2px solid white"
+		id="message"
+		name="message"
+		class="feedback-input"
+		placeholder="Comment"
+		required
+	  ></textarea>
+
+	  <button type="submit" class="submit-button">Send Message</button>
+	</form>
+  </section>
+  <footer>
+	<p>&copy; 2024 Ian Mount. All rights reserved.</p>
+  </footer>
+
+  <script>
