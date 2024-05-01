@@ -1,7 +1,7 @@
 ---
 title: portfolio
 publishDate: 2024-01-05 00:00:00
-img: /home/iamme/code/portfolio2.0/public/assets/porty.jpg
+img: /public/assets/porty.jpg
 img_alt: screenshot
 description: all from scratch
 tags:

@@ -1,75 +1,113 @@
 <section id="contact">
-	<h2 style="text-align: center">Get in Touch</h2>
-	<br />
+  <h2 style="text-align: center">Get in Touch</h2>
+  <br />
 
-	<ul class="contact-links">
-	  <li>
-		<a href="https://github.com/Iansogotthis">GitHub</a
-		><img
-		  src="/images/git.jpg"
-		  alt="GitHub Logo"
-		  style="width: 16px; height: 16px"
-		/>
-	  </li>
-	  <li>
-		
-		<a href="http://www.linkedin.com/in/webdevwonder88">LinkedIn</a
-		><img
-		  src="/images/linkd.png"
-		  alt="LinkedIn Logo"
-		  style="width: 16px; height: 16px"
-		/>
-	  </li>
-	</ul>
-	<br />
-	<div id="responseMessage"></div>
-	<form
-	class="contact-form"
-	id="contactForm"
-	action="https://formspree.io/f/mqkrwqzn"
-	method="POST"
-	onsubmit="handleSubmit(event)"
+  <ul class="contact-links">
+    <li>
+      <a href="https://github.com/Iansogotthis">
+        <img
+          src="../../public/assets/git.jpg"
+          alt="GitHub Logo"
+          style="width: 0 auto; height: 21%"
+        /></a>
+    </li>
+    <li>
+      <a href="http://www.linkedin.com/in/webdevwonder88"
+        ><img
+          src="../../public/assets/linkd.png"
+          alt="LinkedIn Logo"
+          style="width: 0 auto; height: 21%"
+        /></a
+      >
+    </li>
+  </ul>
+  <br />
+  <div id="responseMessage"></div>
+  <form
+    class="contact-form"
+    id="contactForm"
+    action="https://formspree.io/f/mqkrwqzn"
+    method="POST"
+    onsubmit="handleSubmit(event)"
   >
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="feedback-input input-style"
+      placeholder="Name"
+      required
+    />
 
-  <label for="name">Name:</label>
-  <input
-	style="text-align: center; border: 2px solid white"
-	type="text"
-	id="name"
-	name="name"
-	class="feedback-input"
-	placeholder="Name"
-	required
-  />
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="feedback-input input-style"
+      placeholder="Email"
+      required
+    />
 
-	/>
+    <label for="message">Message:</label>
+    <textarea
+      id="message"
+      name="message"
+      class="feedback-input input-style"
+      placeholder="Comment"
+      required></textarea>
 
-	  <label for="email">Email:</label>
-	  <input
-		style="text-align: center; border: 2px solid white"
-		type="email"
-		id="email"
-		name="email"
-		class="feedback-input"
-		placeholder="Email"
-		required
-	  />
+    <button type="submit" class="submit-button">Send Message</button>
+  </form>
+</section>
+<footer>
+  <p>&copy; 2024 Ian Mount. All rights reserved.</p>
+</footer>
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  }
 
-	  <label for="message">Message:</label>
-	  <textarea
-		style="text-align: center; border: 2px solid white"
-		id="message"
-		name="message"
-		class="feedback-input"
-		placeholder="Comment"
-		required
-	  ></textarea>
+  .input-style {
+    width: 100%;
+    height: 2.5em;
+    text-align: center;
+    border: 2px solid #ddd;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 4px;
+  }
 
-	  <button type="submit" class="submit-button">Send Message</button>
-	</form>
-  </section>
-  <footer>
-	<p>&copy; 2024 Ian Mount. All rights reserved.</p>
-  </footer>
+  .submit-button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
 
-  <script>
+  .submit-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
+  }
+</style>
+<script></script>
