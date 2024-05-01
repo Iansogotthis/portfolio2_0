@@ -11,9 +11,6 @@ tags:
   - User Testing
 ---
 
-## Level-two heading
-
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
 
 Project 3: VibeTimes
             

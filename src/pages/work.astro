@@ -10,8 +10,8 @@ const projects = (await getCollection("work")).sort(
 ); 
 --- 
 <BaseLayout 
-  title="My Work | Jeanine White" 
-  description="Learn about Jeanine White's most recent projects" 
+  title="My Work | Ian  Mount" 
+  description="Learn about Ian Mount's most recent projects" 
 > 
   <div class="stack gap-20"> 
     <main class="wrapper stack gap-8"> 
@@ -23,8 +23,9 @@ const projects = (await getCollection("work")).sort(
       <Grid variant="offset"> 
         { 
           projects.map((project, index) => ( 
-            <li key={index}> 
+            <li > key= project.index
               <PortfolioPreview project={project} /> 
+              
             </li> 
           )) 
         } 
@@ -35,59 +36,22 @@ const projects = (await getCollection("work")).sort(
   <section id="projects" class="projects-section"> 
     <h2>My Projects</h2> 
     <div class="project-container"> 
-      { 
-        projects.map((project, index) => ( 
-          <div class="project-card" key={index}> 
-            <div class="project-item"> 
-              <div class="project-image-container"> 
-                <img 
-                  src={project.image} 
+       { 
+          projects.map((project, index, image) => ( 
+                  
+            <li > key= project.index 
+                  image = project.img
+                  <img 
+                  src={image} 
                   alt={"Project " + (index + 1)} 
                   class="project-image" 
-                /> 
-              </div> 
-              <div class="project-details"> 
-                { 
-                  project && project.data && project.data.title ? ( 
-                    <h3>{project.data.title}</h3> 
-                  ) : ( 
-                    <h3>Title not available</h3> 
-                  ) 
-                } 
-                <p>{project && project.data && project.data.description ? project.data.description : "Description not available"}</p> 
-                <h4>Technologies used:</h4> 
-                <ul> 
-                  { 
-                    project && project.data && project.data.technologies ? ( 
-                      project.data.technologies.map((tech, index) => ( 
-                        <li key={index}>{tech}</li> 
-                      )) 
-                    ) : ( 
-                      <li>Technologies not available</li> 
-                    ) 
-                  } 
-                </ul> 
-                <div class="project-links"> 
-                  <a href={project && project.data && project.data.demoLink ? project.data.demoLink : "#"} class="project-link demo-link"> 
-                    View Live Demo 
-                  </a> 
-                  <a href={project && project.data && project.data.githubLink ? project.data.githubLink : "#"} class="project-link github-link"> 
-                    <img 
-                      src="/images/git.jpg" 
-                      alt="GitHub Logo" 
-                      class="logo" 
-                      style="width: 12px; height: 12px" 
-                    /> 
-                    View on GitHub 
-                  </a> 
-                </div> 
-              </div> 
-            </div> 
-          </div> 
-        )) 
-      } 
-    </div> 
-  </section> 
+                />
+              <PortfolioPreview project={project} /> 
+              
+            </li> 
+          )) 
+        } 
+           
 </BaseLayout> 
 <style> 
   .project-container { 
