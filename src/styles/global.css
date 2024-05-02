@@ -530,6 +530,12 @@ h5 {
     background: #777;
 }
 
+.project-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 footer {
     background-color: #070908;
     color: #fff;
