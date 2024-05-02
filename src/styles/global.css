@@ -488,16 +488,18 @@ h5 {
 #responseMessage.show {
     opacity: 1;
 }
-
+form{
+    background-color: #090b11;
+}
 .feedback-input {
-    color: white;
+    color: rgb(5, 9, 5);
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 18px;
     border-radius: 5px;
     line-height: 22px;
     background-color: transparent;
-    border: 2px solid #7c7c7c;
+    border: 2px solid black;
     transition: all 0.3s;
     padding: 13px;
     margin-bottom: 15px;
@@ -538,7 +540,7 @@ h5 {
 }
 footer {
     background-color: #070908;
-    color: #fff;
+    color: #0e2e09;
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
