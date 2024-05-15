@@ -1,7 +1,7 @@
 ---
 title: portfolio
 publishDate: 2024-01-05 00:00:00
-img: /public/assets/porty.jpg
+img: src="../../../../public/assets/portfoli_alt.jpg"
 img_alt: screenshot
 description: all from scratch
 tags:
@@ -9,18 +9,22 @@ tags:
   - FrontEnd
   - Design
 ---
-# Ian Mount's Portfolio
+## Ian Mount's Portfolio
 
-Welcome to Ian Mount's portfolio website! This repository hosts the HTML, CSS, and JavaScript code for Ian's personal portfolio, showcasing his skills, projects, and contact information.
+### Welcome to Ian Mount's portfolio website! This repository hosts the HTML, CSS, and JavaScript code for Ian's personal portfolio, showcasing his skills, projects, and contact information
 
-## Table of Contents
-- [Ian Mount's Portfolio](#ian-mounts-portfolio)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
+### Table of Contents
+
+> [Ian Mount's Portfolio](#ian-mounts-portfolio)
+> [Welcome to Ian Mount's portfolio website! This repository hosts the HTML, CSS, and JavaScript code for Ian's personal portfolio, showcasing
+> his skills, projects, and contact information.](#welcome-to-ian-mounts-portfolio-website-this-repository-hosts-the-html-css-and-javascript-code-for-ians-personal-portfolio-showcasing-his-skills-projects-and-contact-information)
+
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
 ## Introduction
 
@@ -53,4 +57,4 @@ Feel free to explore Ian's portfolio to learn more about his projects and skills
 
 ## Contributing
 
-Contributions to Ian's portfolio are welcome! If you have any suggestions for improvement or would like to report a bug, please open an issue or submit a pull request.
+Contributions to Ian's portfolio are welcome! If you have any suggestions for improvement or would like to report a bug, please open an issue or submit a pull request
